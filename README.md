@@ -2,15 +2,50 @@
 
 Sistema simples de biblioteca para a 1ª Avaliação de Aplicação de Banco de Dados.
 
-## Estrutura
-- `model`: Classes Aluno, Publicacao e Emprestimo
-- `dao`: Classe EmprestimoDAO com operações CRUD
-- `test`: Classe TesteEmprestimoDAO
+## Estrutura do Projeto
+- `model`: Classes que representam as entidades do sistema
+  - `Aluno.java`: Representa um aluno com matrícula e nome
+  - `Publicacao.java`: Representa uma publicação (livro, revista) com código, título, ano, autor e tipo
+  - `Emprestimo.java`: Representa um empréstimo, relacionando aluno e publicação com datas de empréstimo e devolução
+- `dao`: Classe de acesso a dados
+  - `EmprestimoDAO.java`: Implementa operações CRUD (Create, Read, Update, Delete) para empréstimos
+- `test`: Classe de teste
+  - `TesteEmprestimoDAO.java`: Demonstra o uso do DAO com exemplos de todas as operações
 
-## Tecnologias
+## Implementação dos Requisitos
+
+### 1. Mapeamento SQL (0.5 pts)
+Implementado no arquivo `schema.sql` que define as tabelas:
+- `Aluno`: Armazena dados dos alunos
+- `Publicacao`: Armazena informações sobre livros e revistas
+- `Emprestimo`: Gerencia os empréstimos, com chaves estrangeiras para Aluno e Publicacao
+
+### 2. Mapeamento JPA (0.5 pts)
+Classes do pacote `model` implementam o mapeamento objeto-relacional usando anotações JPA:
+- `@Entity`: Marca as classes como entidades
+- `@Id`: Define as chaves primárias
+- `@ManyToOne`: Mapeia os relacionamentos entre entidades
+- `@Temporal`: Define o formato das datas
+
+### 3. Classe DAO (1 pt)
+`EmprestimoDAO.java` implementa todas as operações necessárias:
+- `salvar()`: Cria um novo empréstimo
+- `atualizar()`: Modifica um empréstimo existente
+- `deletar()`: Remove um empréstimo
+- `listarTodos()`: Retorna todos os empréstimos
+
+### 4. Classe de Testes (1 pt)
+`TesteEmprestimoDAO.java` demonstra todas as operações do DAO:
+1. Cria e salva um novo empréstimo
+2. Lista todos os empréstimos
+3. Atualiza a data de devolução
+4. Remove o empréstimo
+
+## Tecnologias Utilizadas
 - Java
-- JPA/Hibernate
-- H2 Database
+- JPA/Hibernate para persistência
+- H2 Database (banco de dados em memória)
+- Maven para gerenciamento de dependências
 
 ## Como Testar (Passo a Passo)
 
