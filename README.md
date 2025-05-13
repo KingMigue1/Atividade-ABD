@@ -16,11 +16,9 @@ Sistema simples de biblioteca para a 1ª Avaliação de Aplicação de Banco de 
 
 ### Pré-requisitos
 1. Java JDK instalado (versão 8 ou superior)
-2. Uma IDE Java (como Eclipse, IntelliJ IDEA ou VS Code)
+2. Eclipse IDE
 
 ### Passos para Testar
-
-#### Usando Eclipse:
 1. Abra o Eclipse
 2. Vá em File -> Import -> Maven -> Existing Maven Projects
 3. Selecione a pasta do projeto
@@ -29,15 +27,6 @@ Sistema simples de biblioteca para a 1ª Avaliação de Aplicação de Banco de 
    - src/main/java/br/atividade/test/TesteEmprestimoDAO.java
 6. Clique com botão direito na classe
 7. Selecione Run As -> Java Application
-
-#### Usando IntelliJ IDEA:
-1. Abra o IntelliJ IDEA
-2. Vá em File -> Open
-3. Selecione a pasta do projeto
-4. Aguarde o IntelliJ baixar as dependências
-5. Encontre a classe `TesteEmprestimoDAO` em:
-   - src/main/java/br/atividade/test/TesteEmprestimoDAO.java
-6. Clique no botão verde de "play" ao lado da classe
 
 ### O que vai acontecer quando executar
 Ao executar a classe de teste, você verá as seguintes mensagens no console:
