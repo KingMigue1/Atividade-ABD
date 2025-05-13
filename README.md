@@ -74,5 +74,5 @@ Ao executar a classe de teste, você verá as seguintes mensagens no console:
 O sistema usa o banco H2, que salva os dados automaticamente. Não é necessário fazer nenhuma configuração adicional.
 
 ## Autores
-Miguel tobias Matricula:202307907289  
-Pedro Matricula:
+Miguel tobias Matricula: 202307907289  
+Pedro Wilson Matricula: 202307907279
